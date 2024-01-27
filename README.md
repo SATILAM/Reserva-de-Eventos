@@ -44,6 +44,17 @@ Configure a página inicial do Salesforce para incluir o componente "Criação d
 
 **********************************************************************************************************************************************
 
+Para o Teste da Classe - Developer Console - Debug - Open Execute Anonymous Window:
+
+String nomeCliente = 'Luan'; <br>
+Date data = Date.newInstance(1960, 2, 17); <br>
+Integer numeroParticipante = 10; <br>
+Double valorParticipante = 5; <br>
+
+
+ReservadeEventos_SalvarReserva.salvaReserva(nomeCliente, data, numeroParticipante, valorParticipante);
+
+
 
 
 
