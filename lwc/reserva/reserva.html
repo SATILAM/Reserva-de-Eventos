@@ -1,0 +1,61 @@
+<template>
+    
+    <lightning-card>
+    <div class="slds-p-horizontal_small">
+        <lightning-record-edit-form>
+
+            <div>Reserva de Eventos</div>
+            <br><br>
+        <lightning-input class="campo" label="Nome" value={nome} onchange={handleNameChange}></lightning-input>
+        <lightning-input class="campo" label="Data" type="date" value={data} onchange={handleDataChange}></lightning-input>
+        <lightning-input  class="campo" label="Número de Participantes" type="number" value={numeroParticipantes} onchange={handleNPChange}></lightning-input>
+        <lightning-input  class="campo" label="Valor por Participante" type="number" value={valorParticipantes} onchange={handleVPChange}></lightning-input>
+        <br>
+
+        <div>Total: {calcularValorTotal}</div>
+
+        <br><br>
+        <lightning-button label="Salvar Reserva" onclick={chama}></lightning-button>
+    </lightning-record-edit-form>
+
+    <div if:true={sucessoMessage} style="padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+        color: white;"
+    
+    >{sucessoMessage}</div>
+    <div if:true={errorMessage} class="mensagem erro" style="
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    ">{errorMessage}</div>
+
+    </div>
+    </lightning-card>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
